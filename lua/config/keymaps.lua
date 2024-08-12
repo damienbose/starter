@@ -10,10 +10,11 @@ map("i", "jj", "<Esc>", { noremap = true, silent = true })
 -- VSCode keymaps
 if vim.g.vscode then
     -- Lazy Git
-    map("n", "<leader>gg", function()
+    map("n", "<leader>g", function()
         local code = require('vscode')
         code.action('lazygit.openLazygit')
-    end, { desc = "Lazy kgit (cwd)" })
+    end, { desc = "Lazy git (cwd)" })
+    unmap("n", "<leader>gg")
     unmap("n", "<leader>gG")
     unmap("n", "<leader>gb")
     unmap("n", "<leader>gB")
