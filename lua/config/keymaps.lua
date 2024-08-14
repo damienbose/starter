@@ -5,7 +5,7 @@
 local map = vim.keymap.set
 local unmap = vim.keymap.del
 
-map("i", "jj", "<Esc>", { noremap = true, silent = true })
+map("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 -- VSCode keymaps
 if vim.g.vscode then
