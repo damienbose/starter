@@ -9,6 +9,13 @@ map("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 -- VSCode keymaps
 if vim.g.vscode then
+    -- VSCode actions
+    map("n", "<leader>cr", function()
+        local code = require('vscode')
+        code.action('editor.action.rename')
+    end, { desc = "Rename Symbol" })
+
+
     -- Lazy Git
     map("n", "<leader>g", function()
         local code = require('vscode')
