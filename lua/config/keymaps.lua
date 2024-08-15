@@ -15,6 +15,38 @@ if vim.g.vscode then
         code.action('editor.action.rename')
     end, { desc = "Rename Symbol" })
 
+    -- Harpoon
+    map("n", "<leader>H", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.addEditor')
+    end, { desc = "Harpoon Add" })
+
+    map("n", "<leader>h", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.editEditors')
+    end, { desc = "Harpoon Add" })
+
+    map("n", "<leader>1", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.gotoEditor1')
+    end, { desc = "Harpoon Editor 1" })
+    map("n", "<leader>2", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.gotoEditor2')
+    end, { desc = "Harpoon Editor 2" })
+    map("n", "<leader>3", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.gotoEditor3')
+    end, { desc = "Harpoon Editor 3" })
+    map("n", "<leader>4", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.gotoEditor4')
+    end, { desc = "Harpoon Editor 4" })
+    map("n", "<leader>5", function()
+        local code = require('vscode')
+        code.action('vscode-harpoon.gotoEditor5')
+    end, { desc = "Harpoon Editor 5" })
+
 
     -- Lazy Git
     map("n", "<leader>g", function()
