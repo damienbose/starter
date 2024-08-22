@@ -5,7 +5,10 @@
 local map = vim.keymap.set
 local unmap = vim.keymap.del
 
-map("i", "jk", "<Esc>", { noremap = true, silent = true })
+-- Primeongen keymaps (with system clipboard sync though)
+vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Do not cut on paste" })
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Do not cut on delete" })
+vim.keymap.set({ "n", "v" }, "<leader>D", '"_D', { desc = "Do not cut on delete" })
 
 -- VSCode keymaps
 if vim.g.vscode then
